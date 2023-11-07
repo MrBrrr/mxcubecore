@@ -68,3 +68,7 @@ class DetectorMockup(AbstractDetector):
         self.update_state(HardwareObjectState.BUSY)
         time.sleep(2)
         self.update_state(HardwareObjectState.READY)
+
+    def custom_action(self, number: float, length: int, name: str, array: list) -> float:
+        print(f"running CustomAction with: {number}, {length}, {name}, {array}")
+        return number

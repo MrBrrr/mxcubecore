@@ -406,6 +406,17 @@ class Beamline(ConfiguredObject):
     __content_roles.append("sample_changer_maintenance")
 
     @property
+    def humidity_controller(self):
+        """Humidity Controller Hardware object
+
+        Returns:
+            Optional[HumidityControllerMockup]:
+        """
+        return self._objects.get("humidity_controller")
+
+    __content_roles.append("humidity_controller")
+
+    @property
     def plate_manipulator(self):
         """Plate Manuipulator Hardware object
         NBNB TODO REMOVE THIS and treat as an alternative sample changer instead.

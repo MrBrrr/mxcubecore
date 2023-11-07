@@ -34,6 +34,11 @@ class SimulatedActionError:
         raise RuntimeError("Simulated error")
 
 
+class MyAction:
+    def __call__(self, *args, **kw):
+        raise RuntimeError("My Action called")
+
+
 class LongSimulatedAction:
     def __call__(self, *args, **kw):
         for i in range(10):
